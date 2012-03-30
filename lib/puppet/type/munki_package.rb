@@ -1,4 +1,15 @@
 Puppet::Type.newtype(:munki_package) do
+  desc 'This is a type that will use Munki to install a package:
+
+    munki_package { \'Firefox\':
+      ensure  => present,
+      catalog => \'production\',
+    }
+
+    It will use the munki_do.py script to do its work, but you must have
+    an existing Munki setup and /Library/Preferences/ManagedInstalls MUST
+    point back to your existing Munki server.'
+
   ensurable
 
   newparam(:name, :namevar => true) do
