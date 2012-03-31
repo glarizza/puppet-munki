@@ -1,4 +1,4 @@
-class puppet-munki {
+class puppet_munki {
   file { '/usr/local/munki/munki_do.py':
     ensure => file,
     mode   => '0700',

@@ -1,7 +1,7 @@
-include puppet-munki
+include puppet_munki
 
 munki_package { 'Firefox':
   ensure  => present,
   catalog => 'production',
-  require => Class['puppet-munki'],
+  require => Class['puppet_munki'],
 }
